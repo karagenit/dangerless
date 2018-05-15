@@ -1,5 +1,5 @@
-module Duplicate
-  def Duplicate.included(parent)
+module Dangerless
+  def Dangerless.included(parent)
     parent.instance_methods.each do |method|
       method = method.to_s
       if method.end_with? '!'
