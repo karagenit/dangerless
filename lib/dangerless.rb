@@ -1,13 +1,15 @@
+##
+# Adds Safe Cloning Methods Automatically from Existing Dangerous ! Methods
+#
 module Dangerless
-  def Dangerless.included(parent)
+  def self.included(parent)
     parent.instance_methods.each do |method|
       method = method.to_s
-      if method.end_with? '!'
-        define_method :"#{method.chomp('!')}" do |*params|
-          copy = self.clone
-          copy.send(method, *params)
-          copy
-        end
+      next unless method.end_with? '!'
+      define_method :"#{method.chomp('!')}" do |*params|
+        copy = clone
+        copy.send(method, *params)
+        copy
       end
     end
   end
