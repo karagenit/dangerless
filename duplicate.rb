@@ -4,7 +4,9 @@ module Duplicate
       method = method.to_s
       if method.end_with? '!'
         define_method :"#{method.chomp('!')}" do |*params|
-          self.clone.send(method, *params)
+          copy = self.clone
+          copy.send(method, *params)
+          copy
         end
       end
     end
