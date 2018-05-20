@@ -14,7 +14,9 @@ $ gem install dangerless
 
 Simply including the `Dangerless` module in your class will automatically generate the methods.
 
-```
+```ruby
+require 'dangerless'
+
 def MyClass
   def modify!(args)
     ...
@@ -30,9 +32,10 @@ MyClass.new.instance_methods #=> [:modify!, :modify]
 
 Of course, if you have some methods which you don't want "safe" duplicates of, you can simply define them *after* the call to `include Dangerless`:
 
-```
+```ruby
+require 'dangerless'
+
 def MyClass
-  ...
   include Dangerless
 
   def modify!(args)
