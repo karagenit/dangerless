@@ -1,5 +1,10 @@
 # Dangerless
 
+[![Travis CI](https://img.shields.io/travis/karagenit/dangerless.svg?style=flat-square)](https://travis-ci.org/karagenit/dangerless)
+[![Code Climate](https://img.shields.io/codeclimate/github/karagenit/dangerless.svg?style=flat-square)](https://codeclimate.com/github/karagenit/dangerless)
+[![Gem Version](https://img.shields.io/gem/v/dangerless.svg?style=flat-square)](https://rubygems.org/gems/dangerless)
+[![Gem](https://img.shields.io/gem/dt/dangerless.svg?style=flat-square)](https://rubygems.org/gems/dangerless)
+
 Automatically Add Cloning (Safe) Variants of Bang (Dangerous) Methods (e.g. `.method!`)
 
 ## Installation
